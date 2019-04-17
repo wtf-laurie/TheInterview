@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="check-in.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check-In</title>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+  </head>
+  <body>
+
+    <div id="top">
+    
+      <div class="dropdown">
+      
+        <button onclick="myFunction()" class="dropbtn">
+        Menu
+        </button>
+        
+        <div id="myDropdown" class="dropdown-content">
+          
+          <a href="../Check-in/Check-In.html">
+            <p>
+              Check-In          
+            </p>
+          </a>
+          
+          <a href="../FloorPlan/FloorPlan.html">
+            <p>
+              Floor Plan
+            </p>
+          </a>
+          
+          <a href="../Food-Bev/Food-Bev.html">
+            <p>
+              Food and Beverage
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  <div id="pagebox">   
+
+      <div class="form">
+      <p>
+      Student Name:
+        <input type="text" id="lname" placeholder="Doe">
+        <input type="text" id="fname" placeholder="John">
+       </p>
+        <br>
+      <p>
+      Interviewer and Time:
+        <input type="text" id="int" placeholder="Jane Doe Cheese LLC.">
+        <input type="text" id="time" placeholder="12:00 (24 Hour Time)">
+      </p>
+        <button onclick="addRow()">submit</button>
+
+      </div>
+
+    <div class="parent">
+
+      <div class="scrollbar"></div>
+      <div class="scrollable">
+
+        <table id="inventory" style="width: 100%">
+  <thead>
+    <tr>
+      <th>Time</th>
+      <th>Interviewer</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+    </tr>
+  </thead>
+  <tbody id="screen">
+  </tbody>
+</table>
+
+      </div>
+
+    </div>
+    
+  </div>
+<script>
+    $( document ).ready(function(){
+      $('#screen').html(localStorage.getItem("data"));
+      
+    });
+    function addRow(){
+      var str = '<tr class = "boxType"><td>'+$('#time').val()+'</td>\
+  <td>'+$('#int').val()+'</td>\
+  <td>'+$('#lname').val()+'</td>\
+  <td>'+$('#fname').val()+'</td>\
+  </tr>'
+      $('#screen').append(str);
+      localStorage.setItem("data", $('#screen').html());
+    }
+  </script>
+  </body>
+
+</html>

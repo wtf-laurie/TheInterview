@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html>
+
+  <head>
+  
+    <link rel="stylesheet" type="text/css" href="check-in.css">
+     
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>
+      Check-In
+    </title>
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+<script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+  </head>
+  
+  <body>
+  
+  <div id="top">
+    
+      <div class="dropdown">
+      
+        <button onclick="myFunction()" class="dropbtn">
+        Menu
+        </button>
+        
+        <div id="myDropdown" class="dropdown-content">
+          
+          <a href="../Check-in/index.html">
+            <p>
+              Check-In          
+            </p>
+          </a>
+          
+          <a href="../Floor Plan/index.html">
+            <p>
+              Floor Plan
+            </p>
+          </a>
+          
+          <a href="../Food n Bev/Food-Bev.html">
+            <p>
+              Food and Beverage
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport"
+        content="width=device-width,
+        initial-scale=1.0,
+        user-scalable=no" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Drag/Drop/Bounce</title>
+  <link rel="stylesheet" type="text/css" href="FloorPlan.css"
+</head>
+
+<body>
+
+  <div id="outerContainer">
+    <div id="container">
+      <div id="item">
+
+      </div>
+      <button>Clone</button>
+    </div>
+  </div>
+
+
+  <script>
+    var dragItem = document.querySelector("#item");
+    var container = document.querySelector("#container");
+    var active = false;
+    var currentX;
+    var currentY;
+    var initialX;
+    var initialY;
+    var xOffset = 0;
+    var yOffset = 0;
+    container.addEventListener("touchstart", dragStart, false);
+    container.addEventListener("touchend", dragEnd, false);
+    container.addEventListener("touchmove", drag, false);
+    container.addEventListener("mousedown", dragStart, false);
+    container.addEventListener("mouseup", dragEnd, false);
+    container.addEventListener("mousemove", drag, false);
+    function dragStart(e) {
+      if (e.type === "touchstart") {
+        initialX = e.touches[0].clientX - xOffset;
+        initialY = e.touches[0].clientY - yOffset;
+      } else {
+        initialX = e.clientX - xOffset;
+        initialY = e.clientY - yOffset;
+      }
+      if (e.target === dragItem) {
+        active = true;
+      }
+    }
+    function dragEnd(e) {
+      initialX = currentX;
+      initialY = currentY;
+      active = false;
+    }
+    function drag(e) {
+      if (active) {
+        e.preventDefault();
+        if (e.type === "touchmove") {
+          currentX = e.touches[0].clientX - initialX;
+          currentY = e.touches[0].clientY - initialY;
+        } else {
+          currentX = e.clientX - initialX;
+          currentY = e.clientY - initialY;
+        }
+        xOffset = currentX;
+        yOffset = currentY;
+        setTranslate(currentX, currentY, dragItem);
+      }
+    }
+    function setTranslate(xPos, yPos, el) {
+      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+    }
+  $(document).ready(function(){
+    $("button").click(function(){
+      $("#item").clone().appendTo("#container");
+    });
+  })
+  </script>
+</body>
+
+</html>
+  </body>
+
+</html>
