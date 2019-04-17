@@ -29,6 +29,7 @@ body {
   text-decoration: none;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s ease all;
+  background-color: transparent;
 }
 .bttn-medium:hover {
   color: #fff;
