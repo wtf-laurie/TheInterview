@@ -24,19 +24,19 @@ body {
   align-items: center;
   justify-content: center;
 }
-input[type=submit] {
+.bttn-medium {
   color: #1a9cbc;
   text-decoration: none;
   -webkit-transition: 0.3s all ease;
   transition: 0.3s ease all;
 }
-input[type=submit]:hover {
+.bttn-medium:hover {
   color: #fff;
 }
-input[type=submit]:focus {
+.bttn-medium:focus {
   color: #fff;
 }
-input[type=submit] {
+.bttn-medium {
   font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -51,7 +51,7 @@ input[type=submit] {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
-input[type=submit]:before {
+.bttn-medium:before {
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   position: absolute;
@@ -64,14 +64,14 @@ input[type=submit]:before {
   background-color: #1a9cbc;
   z-index: -1;
 }
-input[type=submit]:hover:before {
+.bttn-medium:hover:before {
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   left: 0;
   right: 0;
   opacity: 1;
 }
-input[type=submit]:focus:before {
+#bttn-medium:focus:before {
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   left: 0;
