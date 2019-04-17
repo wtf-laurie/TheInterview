@@ -71,7 +71,7 @@ body {
   right: 0;
   opacity: 1;
 }
-#bttn-medium:focus:before {
+.bttn-medium:focus:before {
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   left: 0;
