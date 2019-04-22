@@ -12,7 +12,7 @@ body {
   padding: 0px;
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
-  background: #fbf9ff;
+  background-image:linear-gradient(180deg, #fbf9ff,#fbf9ff,#fbf9ff,#fbf9ff,#ff0072);
   -webkit-font-smoothing: antialiased;
 }
 .flex {

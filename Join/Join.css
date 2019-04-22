@@ -16,7 +16,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 .medium {
-  background: #c7c8c9;
+  background-image:linear-gradient(180deg,#c7c8c9,#c7c8c9,#c7c8c9,#c7c8c9,#1a9cbc);
 }
 .flex {
   min-height: 100vh;

@@ -22,7 +22,7 @@ body {
   background: #c7c8c9;
 }
 .flex {
-  min-height: 33vh;
+  min-height: 33.333vh;
   display: flex;
   align-items: center;
   justify-content: center;

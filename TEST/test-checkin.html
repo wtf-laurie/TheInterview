@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="test-checkin.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Check-In</title>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+
+<nav class="nav-main">
+  <ul>
+    <li>
+      <a href="#" class="nav-item logo">Menu</a>
+      <div class="nav-content">
+       <div class="nav-sub">
+        <ul>
+          <li>
+            <a href="Check-In.html" class="nav-item">Check-in</a>
+          </li>
+          <li>
+            <a href="../FloorPlan/FloorPlan.html" class="nav-item">Floor Plan</a>
+          </li>
+          <li>
+            <a href="../Food-Bev/Food-Bev.html" class="nav-item">Food & Beverage</a>
+          </li>
+        </ul>
+       </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="pagebox">
+  <div class="form">
+    <p>Student Name:
+    <input type="text" id="lname" placeholder="Doe">
+    <input type="text" id="fname" placeholder="John">
+    </p>
+    <br>
+    <p>
+    Interviewer and Time:
+    <input type="text" id="int" placeholder="Jane Doe Cheese LLC.">
+    <input type="text" id="time" placeholder="12:00 (24 Hour Time)">
+    </p>
+    <button onclick="addRow()">submit</button>
+</div>
+
+<div class="parent">
+  <div class="scrollbar" id="style-1"></div>
+  <div class="scrollable">
+    <table style="width: 100%">
+      <thead>
+        <tr>
+         <th>Time</th>
+         <th>Interviewer</th>
+         <th>Last Name</th>
+         <th>First Name</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  </div>
+</div>
+
+</body>
+</html>
