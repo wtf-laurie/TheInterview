@@ -36,21 +36,22 @@
 
 <div>   
   <div class="form">
-    <p>Student Name:
-    <input type="text" id="lname" placeholder="Doe">
-    <input type="text" id="fname" placeholder="John">
+    <p>Student Name:<br>
+    <input type="text" id="lname" placeholder="Last">
+    <input type="text" id="fname" placeholder="First">
     </p>
-    <br>
     <p>
-    Interviewer and Time:
-    <input type="text" id="int" placeholder="Jane Doe Cheese LLC.">
+    Interviewer:<br>
+    <input type="text" id="int" placeholder="Last, First">
+    </p>
+    <p>
+    Time:<br>
     <input type="text" id="time" placeholder="12:00 (24 Hour Time)">
     </p>
     <button onclick="addRow()">submit</button>
   </div>
 
   <div class="parent">
-  <div class="scrollbar"></div>
   <div class="scrollable">
     <table id="inventory" style="width: 100%">
       <thead>

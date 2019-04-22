@@ -109,10 +109,11 @@ body {
 .parent {
   position: absolute;
   overflow: hidden;
-  height: 100%;
-  width: 50%;
+  height: 954px;
+  width: 60%;
   background: #ddd;
   z-index: 1;
+  padding-left: 5px;
 }
 
 .scrollable {
@@ -120,15 +121,9 @@ body {
   padding: 0 17px 0 0;
   width: 100%;
   height: 100%;
-}
-
-.scrollbar {
-  margin-left: 1px;
+  margin-left: 20px;
   float: right;
-  height: 90%;
-  width: 10px;
   background: #F5F5F5;
-  overflow-y: scroll;
   margin-bottom: 1px;
 }
 
@@ -160,10 +155,10 @@ body {
 
 
 .form {
-  float: left;
+  float: right;
   background: #DDE5F1;
-  width: 50%;
-  height: 100vh;
+  width: 40%;
+  height: 954px;
   margin-left: 50%;
   text-align: center;
   z-index: 1;
@@ -171,4 +166,23 @@ body {
 
 p {
   font-size: 24px;
+}
+
+input[type=text]{
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+table {
+  padding-left: 20px;
+  word-wrap: break-word;
+}
+
+tbody {
+  font-size: 14px;
 }
