@@ -1,10 +1,96 @@
-
 <!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="Food-Bev.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Food & Beverage</title>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+
+<body>
+<!--DROPDOWN NOT LINKING OOF -->
+<nav class="nav-main">
+  <ul>
+    <li>
+      <a href="#" class="nav-item logo">Menu</a>
+      <div class="nav-content">
+       <div class="nav-sub">
+        <ul>
+          <li>
+            <a href="../Check-In/Check-In.html" class="nav-item">Check-in</a>
+          </li>
+          <li>
+            <a href="#" class="nav-item">Floor Plan</a>
+          </li>
+          <li>
+            <a href="../Food-Bev/Food-Bev.html" class="nav-item">Food and Beverage</a>
+          </li>
+        </ul>
+       </div>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div>   
+  <div class="form">
+    <p>
+    Interviewer:<br>
+    <input type="text" id="int" placeholder="Last, First">
+    </p>
+    <p>
+    Dietary Restriction:<br>
+    <select name="diet" form="dietform" id="dietres">
+      <option value="None">None</option>
+      <option value="Vegetarian">Vegetarian</option>
+      <option value="Vegan">Vegan</option>
+    </select>
+    <br>
+    <button onclick="addRow()">submit</button>
+  </div>
+
+  <div class="parent">
+  <div class="scrollable">
+    <table id="inventory" style="width: 100%">
+      <thead>
+        <tr>
+         <th>Dietary Restriciton</th>
+         <th>Interviewer</th>
+        </tr>
+      </thead>
+      <tbody id="food"></tbody>
+    </table>
+  </div>
+  </div>
+</div>
+
+<script>
+    $( document ).ready(function(){
+      $('#food').html(localStorage.getItem("data"));
+      
+    });
+    function addRow(){
+      var str = '<tr class = "boxType"><td>'+$('#dietres').val()+'</td>\
+  <td>'+$('#int').val()+'</td>\
+  </tr>'
+      $('#food').appe-nd(str);
+      localStorage.setItem("data", $('#food').html());
+    }
+</script>
+</body>
+
+</html>
+
+
+
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="Food-Bev.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FoodAndBev</title>
+    <title>Food & Beverage</title>
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
@@ -12,7 +98,7 @@
   </head>
 
 <body>
-<!--DROPDOWN NOT LINKING OOF -->
+DROPDOWN NOT LINKING OOF
 <nav class="nav-main">
   <ul>
     <li>
@@ -77,98 +163,4 @@
 </script>
 </body>
 
-</html>
-
-<!--
-    <div id="top">
-    
-      <div class="dropdown">
-      
-        <button onclick="myFunction()" class="dropbtn">
-        Menu
-        </button>
-        
-        <div id="myDropdown" class="dropdown-content">
-          
-          <a href="../Check-in/index.html">
-            <p>
-              Check-In          
-            </p>
-          </a>
-          
-          <a href="../Floor Plan/index.html">
-            <p>
-              Floor Plan
-            </p>
-          </a>
-          
-          <a href="../Food n Bev/Food-Bev.html">
-            <p>
-              Food and Beverage
-            </p>
-          </a>
-        </div>
-      </div>
-    </div>
-
-  <div id="pagebox">   
-
-      <div class="form">
-      <p>
-      Interviewer and Company:
-        <input type="text" id="lname" placeholder="Jane Doe">
-        <input type="text" id="fname" placeholder="Cheese LLC.">
-       </p>
-        <br>
-      <p>
-      Dietary Restrictions and Drink:
-        <input type="text" id="int" placeholder="Vegan">
-        <input type="text" id="time" placeholder="Sprite">
-      </p>
-        <button onclick="addRow()">submit</button>
-
-      </div>
-
-    <div class="parent">
-
-      <div class="scrollbar"></div>
-      <div class="scrollable">
-
-        <table id="inventory" style="width: 100%">
-  <thead>
-    <tr>
-      <th>Interviewer</th>
-      <th>Company</th>
-      <th>Dietary Restrictions</th>
-      <th>Drinks</th>
-    </tr>
-  </thead>
-  <tbody id="screen">
-  </tbody>
-</table>
-
-      </div>
-
-    </div>
-    
-  </div>
-
-<script>
-    $( document ).ready(function(){
-      $('#screen').html(localStorage.getItem("data"));
-      
-    });
-    function addRow(){
-      var str = '<tr class = "boxType"><td>'+$('#lname').val()+'</td>\
-  <td>'+$('#fname').val()+'</td>\
-  <td>'+$('#int').val()+'</td>\
-  <td>'+$('#time').val()+'</td>\
-  </tr>'
-      $('#screen').append(str);
-      localStorage.setItem("data", $('#screen').html());
-    }
-  </script>
-  </body>
-
-</html>
--->
+</html> -->

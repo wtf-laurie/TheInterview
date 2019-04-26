@@ -111,9 +111,10 @@ body {
   overflow: hidden;
   height: 954px;
   width: 60%;
-  background: #ddd;
+  background: #f0f0fd;
   z-index: 1;
   padding-left: 5px;
+
 }
 
 .scrollable {
@@ -123,13 +124,13 @@ body {
   height: 100%;
   margin-left: 20px;
   float: right;
-  background: #F5F5F5;
+  background: #f0f0fd;
   margin-bottom: 1px;
 }
 
 .form {
   float: right;
-  background: #DDE5F1;
+  background: #e0e9dd;
   width: 40%;
   height: 954px;
   margin-left: 50%;
@@ -158,4 +159,8 @@ table {
 
 tbody, th {
   font-size: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(226, 228, 226, 1);
 }

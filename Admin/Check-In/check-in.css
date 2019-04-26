@@ -111,7 +111,7 @@ body {
   overflow: hidden;
   height: 954px;
   width: 60%;
-  background: #ddd;
+  background: #b5c3c3;
   z-index: 1;
   padding-left: 5px;
 }
@@ -123,13 +123,13 @@ body {
   height: 100%;
   margin-left: 20px;
   float: right;
-  background: #F5F5F5;
+  background: #f0f0fd;
   margin-bottom: 1px;
 }
 
 .form {
   float: right;
-  background: #DDE5F1;
+  background: #ced2f7;
   width: 40%;
   height: 954px;
   margin-left: 50%;
@@ -158,4 +158,8 @@ table {
 
 tbody {
   font-size: 14px;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(233, 235, 251, 1);
 }
