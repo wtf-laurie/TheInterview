@@ -7,6 +7,8 @@
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript" src="Check-In.js"></script>
 </head>
 
 <body>
@@ -35,21 +37,21 @@
 </nav>
 
 <div>   
-  <div class="form">
-    <p>Student Name:<br>
-    <input type="text" id="lname" placeholder="Last">
-    <input type="text" id="fname" placeholder="First">
+  <form class="form">
+    <p class="form-txt">Student Name:<br>
+    <input type="text" id="lname" placeholder="Last" required>
+    <input type="text" id="fname" placeholder="First" required>
     </p>
-    <p>
+    <p class="form-txt">
     Interviewer:<br>
-    <input type="text" id="int" placeholder="Last, First">
+    <input type="text" id="int" placeholder="Last, First" required>
     </p>
-    <p>
+    <p class="form-txt">
     Time:<br>
-    <input type="time" id="time" placeholder="12:00 (24 Hour Time)">
+    <input type="time" id="time" placeholder="12:00 (24 Hour Time)" required>
     </p>
-    <button onclick="addRow()">submit</button>
-  </div>
+    <button onclick="addRow()">Submit</button>
+  </form>
 
   <div class="parent">
   <div class="scrollable">
@@ -78,10 +80,17 @@
   <td>'+$('#int').val()+'</td>\
   <td>'+$('#lname').val()+'</td>\
   <td>'+$('#fname').val()+'</td>\
+  <td><input type="button" value="DELETE" /></td>\
   </tr>'
       $('#screen').append(str);
       localStorage.setItem("data", $('#screen').html());
     }
+
+        // DELETE TABLE ROW.
+    $('#screen').on('click', 'input[type="button"]', function () {
+    $(this).closest('tr').remove();
+})
+
 </script>
 </body>
 

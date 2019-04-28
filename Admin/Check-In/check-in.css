@@ -1,7 +1,7 @@
 /* #4494B4 (Light Navy Blue) #DDE5F1 (Very Light Blue) #1E303E (Dark Blue) #59535D (Purple) #6686A2 (Med Blue) */
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:700";
 
-html, body {
+html, body{
   height: 100%;
   width: 100%;
 }
@@ -15,7 +15,7 @@ body {
 
 .nav-main {
   width: 100%;
-  background-color: gray;
+  background-color: #303030;
   height: 70px;
   color: white;
   z-index: 2;
@@ -65,7 +65,7 @@ body {
   position: absolute;
   top: 70px;
   overflow: hidden;
-  background-color: gray;
+  background-color: #303030;
   max-height: 0;
   z-index: 2;
 }
@@ -111,7 +111,7 @@ body {
   overflow: hidden;
   height: 954px;
   width: 60%;
-  background: #b5c3c3;
+  background: #E6EDF5;
   z-index: 1;
   padding-left: 5px;
 }
@@ -123,18 +123,24 @@ body {
   height: 100%;
   margin-left: 20px;
   float: right;
-  background: #f0f0fd;
+  background: #E6EDF5;
   margin-bottom: 1px;
 }
 
 .form {
   float: right;
-  background: #ced2f7;
+  background: #98BAD6;
   width: 40%;
   height: 954px;
   margin-left: 50%;
   text-align: center;
   z-index: 1;
+  color: #FFF;
+  letter-spacing: 1px;
+}
+
+.form-txt {
+  color: #F0F0F0;
 }
 
 p {
@@ -161,5 +167,24 @@ tbody {
 }
 
 tr:nth-child(even) {
-  background-color: rgba(233, 235, 251, 1);
+  background-color: rgba(198, 217, 235, 1);
+}
+
+button {
+  color: white;
+  border-radius: 4px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #1F3E5B;
+  font-family: inherit;
+  font-size: 20px;
+  padding: .5em 1em;
+  border: transparent;
+  text-decoration: none;
+}
+
+input[type="button"] {
+  background: rgba(255, 133, 133, 1);
+  border-radius: 4px;
+  font-family: inherit;
+  border: transparent;text-decoration: none;
 }
