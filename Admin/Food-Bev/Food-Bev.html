@@ -7,33 +7,23 @@
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script type="text/javascript" src="Food-Bev.js"></script>
 </head>
 
 <body>
 <!--DROPDOWN NOT LINKING OOF -->
-<nav class="nav-main">
-  <ul>
-    <li>
-      <a href="#" class="nav-item logo">Menu</a>
-      <div class="nav-content">
-       <div class="nav-sub">
-        <ul>
-          <li>
-            <a href="../Check-In/Check-In.html" class="nav-item">Check-in</a>
-          </li>
-          <li>
-            <a href="#" class="nav-item">Floor Plan</a>
-          </li>
-          <li>
-            <a href="../Food-Bev/Food-Bev.html" class="nav-item">Food and Beverage</a>
-          </li>
-        </ul>
-       </div>
-      </div>
-    </li>
-  </ul>
-</nav>
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Menu 
+    </button>
+    <div class="dropdown-content">
+      <a href="../Check-In/Check-In.html">Check-In</a>
+      <a href="#">Food & Beverage</a>
+      <a href="../FloorPlan/FloorPlan.html">Floor Plan</a>
+    </div>
+  </div> 
+</div>
 
 <div>   
   <div class="form">
@@ -81,9 +71,10 @@
       localStorage.setItem("fooddata", $('#food').html());
     }
 
-    $('#screen').on('click', 'input[type="button"]', function () {
+    $('#food').on('click', 'input[type="button"]', function () {
     $(this).closest('tr').remove();
 })
+
 </script>
 </body>
 

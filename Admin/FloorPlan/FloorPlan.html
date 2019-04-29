@@ -7,32 +7,26 @@
 </head>
 <body>
 
-<nav class="nav-main">
-  <ul>
-    <li>
-      <a href="#" class="nav-item logo">Menu</a>
-      <div class="nav-content">
-       <div class="nav-sub">
-        <ul>
-          <li>
-            <a href="#" class="nav-item">Check-in</a>
-          </li>
-          <li>
-            <a href="../FloorPlan/FloorPlan.html" class="nav-item">Floor Plan</a>
-          </li>
-          <li>
-            <a href="../Food-Bev/Food-Bev.html" class="nav-item">Food and Beverage</a>
-          </li>
-        </ul>
-       </div>
-      </div>
-    </li>
-  </ul>
-</nav>
+<div class="navbar">
+  <div class="dropdown">
+    <button class="dropbtn">Menu 
+    </button>
+    <div class="dropdown-content">
+      <a href="../Check-In/Check-In.html">Check-In</a>
+      <a href="../Food-Bev/Food-Bev.html">Food & Beverage</a>
+      <a href="#">Floor Plan</a>
+    </div>
+  </div> 
+</div>
 
 <div class="grid-container">
-  <div class="grid-item">1</div>
-  <div class="grid-item">2</div>
+      <button class="table" onclick="document.getElementById('id01').style.display='block'" style="width: auto; height: auto;"></button>
+  <div class="grid-item">1
+    <button class="table" onclick="document.getElementById('id01').style.display='block'" style="width: auto; height: auto;"></button>
+  </div>
+  <div class="grid-item">2
+    <button class="table" onclick="document.getElementById('id01').style.display='block'" style="width: auto; height: auto;"></button>
+  </div>
   <div class="grid-item">3</div>
   <div class="grid-item">4</div>
   <div class="grid-item">5</div>
@@ -62,6 +56,28 @@
   <div class="grid-item">29</div>
   <div class="grid-item">30</div>
 
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate">
+
+    <div class="container">
+      <label for="uname"><b> Interviewer Name </b></label>
+      <input type="text" placeholder="Enter Name" name="uname" required>
+      
+      <button onclick="changeColor();" id="color">
+     </button>
+        
+      <button> Update</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
 </div>
 
 
@@ -70,145 +86,3 @@
 </body>
 </html>
 
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-
-  <head>
-  
-    <link rel="stylesheet" type="text/css" href="check-in.css">
-     
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>
-      Floor Plan
-    </title>
-    
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    
-<script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
-  </head>
-  
-  <body>
-  
-  <div id="top">
-    
-      <div class="dropdown">
-      
-        <button onclick="myFunction()" class="dropbtn">
-        Menu
-        </button>
-        
-        <div id="myDropdown" class="dropdown-content">
-          
-          <a href="../Check-In/Check-In.html">
-            <p>
-              Check-In          
-            </p>
-          </a>
-          
-          <a href="#">
-            <p>
-              Floor Plan
-            </p>
-          </a>
-          
-          <a href="../Food-Bev/Food-Bev.html">
-            <p>
-              Food and Beverage
-            </p>
-          </a>
-        </div>
-      </div>
-    </div>
-    </div>
-    <!DOCTYPE html>
-<html>
-
-<head>
-  <meta name="viewport"
-        content="width=device-width,
-        initial-scale=1.0,
-        user-scalable=no" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <title>Drag/Drop/Bounce</title>
-  <link rel="stylesheet" type="text/css" href="FloorPlan.css"
-</head>
-
-<body>
-
-  <div id="outerContainer">
-    <div id="container">
-      <div id="item">
-
-      </div>
-      <button>Clone</button>
-    </div>
-  </div>
-
-
-  <script>
-    var dragItem = document.querySelector("#item");
-    var container = document.querySelector("#container");
-    var active = false;
-    var currentX;
-    var currentY;
-    var initialX;
-    var initialY;
-    var xOffset = 0;
-    var yOffset = 0;
-    container.addEventListener("touchstart", dragStart, false);
-    container.addEventListener("touchend", dragEnd, false);
-    container.addEventListener("touchmove", drag, false);
-    container.addEventListener("mousedown", dragStart, false);
-    container.addEventListener("mouseup", dragEnd, false);
-    container.addEventListener("mousemove", drag, false);
-    function dragStart(e) {
-      if (e.type === "touchstart") {
-        initialX = e.touches[0].clientX - xOffset;
-        initialY = e.touches[0].clientY - yOffset;
-      } else {
-        initialX = e.clientX - xOffset;
-        initialY = e.clientY - yOffset;
-      }
-      if (e.target === dragItem) {
-        active = true;
-      }
-    }
-    function dragEnd(e) {
-      initialX = currentX;
-      initialY = currentY;
-      active = false;
-    }
-    function drag(e) {
-      if (active) {
-        e.preventDefault();
-        if (e.type === "touchmove") {
-          currentX = e.touches[0].clientX - initialX;
-          currentY = e.touches[0].clientY - initialY;
-        } else {
-          currentX = e.clientX - initialX;
-          currentY = e.clientY - initialY;
-        }
-        xOffset = currentX;
-        yOffset = currentY;
-        setTranslate(currentX, currentY, dragItem);
-      }
-    }
-    function setTranslate(xPos, yPos, el) {
-      el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
-    }
-  $(document).ready(function(){
-    $("button").click(function(){
-      $("#item").clone().appendTo("#container");
-    });
-  })
-  </script>
-</body>
-
-</html>
-  </body>
-
-</html> -->
