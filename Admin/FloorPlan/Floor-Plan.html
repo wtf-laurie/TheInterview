@@ -5,29 +5,98 @@
 	<meta charset="UTF-8">
 	<title>Floor Plan (2)</title>
 </head>
+
+<style>
+	html, .root, body {
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		position: relative;
+	}
+
+
+	.motal-layout {
+		position : absolute;
+		top: 0%;
+		display: flex;
+		width: 100%;
+		height : 100%;
+		background: rgba(0,0,0,0.5);
+		justify-content: center;
+	}
+
+	.motal-container {
+		display: table;
+		margin: auto;
+		width: 30rem;
+		height: 20rem;
+		background : blue;
+	}
+
+	form {
+		justify-content: center;
+    	flex-direction: column;
+    	display: flex;
+    	width: 100%;
+    	height: 100%;
+    	display: flex;
+	}
+
+	form > input {
+		width: 13rem;
+    	margin: 1rem auto;
+    	height: 2rem;
+	}
+
+	form > button {
+		width: 4rem;
+    	margin: 0 auto;
+	}
+
+</style>
+
 <body>
 
-<div class="navbar">
-  <div class="dropdown">
-    <button class="dropbtn">Menu 
-    </button>
-    <div class="dropdown-content">
-      <a href="../Check-In/Check-In.html">Check-In</a>
-      <a href="../Food-Bev/Food-Bev.html">Food & Beverage</a>
-      <a href="#">Floor Plan</a>
-    </div>
-  </div> 
-</div>
+<div class="root">
+	<div class="navbar">
+	  <div class="dropdown">
+	    <button class="dropbtn">Menu 
+	    </button>
+	    <div class="dropdown-content">
+	      <a href="../Check-In/Check-In.html">Check-In</a>
+	      <a href="../Food-Bev/Food-Bev.html">Food & Beverage</a>
+	      <a href="#">Floor Plan</a>
+	    </div>
+	  </div> 
+	</div>
 
-<div class="grid-container">
-  <div class="grid-item">1</div>
-  <div class="grid-item">2</div>
-  <div class="grid-item">3</div>
-  <div class="grid-item">4</div>
-  <div class="grid-item">5</div>
-  <div class="grid-item">6</div>
-</div>
+	<div class="grid-container">
+	  <div class="grid-item">1</div>
+	  <div class="grid-item">2</div>
+	  <div class="grid-item">3</div>
+	  <div class="grid-item">4</div>
+	  <div class="grid-item">5</div>
+	  <div class="grid-item">6</div>
+	</div>
 
+	<div class="motal-layout">
+		
+		<div class="motal-container">
+				
+			<form action="">
+				
+				<input type="text" placeholder="Change Interviewer Name" />
+
+				<button>oof</button>
+
+		</form>
+
+
+		</div>
+
+	</div>
+
+</div>
 
 
 <script src="Floor-Plan.js"></script>
