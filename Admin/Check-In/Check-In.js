@@ -1,4 +1,4 @@
-
+/*
 
 function check() {
   document.written()
@@ -22,4 +22,24 @@ $scrollbar.height( barHeight ).draggable({
 // Element scroll:
 $scrollable.on("scroll", function() {
   $scrollbar.css({top: $scrollable.scrollTop() / height * barHeight });
-});
+}); */
+
+    $( document ).ready(function(){
+      $('#screen').html(localStorage.getItem("data"));
+      
+    });
+    function addRow(){
+      var str = '<tr class = "boxType"><td>'+$('#time').val()+'</td>\
+  <td>'+$('#int').val()+'</td>\
+  <td>'+$('#lname').val()+'</td>\
+  <td>'+$('#fname').val()+'</td>\
+  <td><input type="button" value="DELETE" /></td>\
+  </tr>'
+      $('#screen').append(str);
+      localStorage.setItem("data", $('#screen').html());
+    }
+
+        // DELETE TABLE ROW.
+    $('#screen').on('click', 'input[type="button"]', function () {
+    $(this).closest('tr').remove();
+})

@@ -1,9 +1,11 @@
 /* #4494B4 (Light Navy Blue) #DDE5F1 (Very Light Blue) #1E303E (Dark Blue) #59535D (Purple) #6686A2 (Med Blue) */
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:700";
 
-html, body {
-  height: 100%;
-  width: 100%;
+html, .root, body {
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ position: relative;
 }
 
 body {

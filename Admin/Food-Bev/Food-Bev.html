@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<!--DROPDOWN NOT LINKING OOF -->
+<div class="root">
 <div class="navbar">
   <div class="dropdown">
     <button class="dropbtn">Menu 
@@ -57,25 +57,9 @@
   </div>
   </div>
 </div>
+</div>
 
-<script>
-    $( document ).ready(function(){
-      $('#food').html(localStorage.getItem("fooddata"));
-      
-    });
-    function addRow(){
-      var str = '<tr class = "boxType"><td>'+$('#dietres').val()+'</td>\
-  <td>'+$('#int').val()+'</td>\<td><input type="button" value="DELETE" /></td>\
-  </tr>'
-      $('#food').append(str);
-      localStorage.setItem("fooddata", $('#food').html());
-    }
-
-    $('#food').on('click', 'input[type="button"]', function () {
-    $(this).closest('tr').remove();
-})
-
-</script>
+<script src="Food-Bev.js"></script>
 </body>
 
 </html>

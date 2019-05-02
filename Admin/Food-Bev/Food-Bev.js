@@ -1,4 +1,4 @@
-
+/*
 
 function check() {
   document.written()
@@ -22,4 +22,20 @@ $scrollbar.height( barHeight ).draggable({
 // Element scroll:
 $scrollable.on("scroll", function() {
   $scrollbar.css({top: $scrollable.scrollTop() / height * barHeight });
-});
+}); */
+
+    $( document ).ready(function(){
+      $('#food').html(localStorage.getItem("fooddata"));
+      
+    });
+    function addRow(){
+      var str = '<tr class = "boxType"><td>'+$('#dietres').val()+'</td>\
+  <td>'+$('#int').val()+'</td>\<td><input type="button" value="DELETE" /></td>\
+  </tr>'
+      $('#food').append(str);
+      localStorage.setItem("fooddata", $('#food').html());
+    }
+
+    $('#food').on('click', 'input[type="button"]', function () {
+    $(this).closest('tr').remove();
+})

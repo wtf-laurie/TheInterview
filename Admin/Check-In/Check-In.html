@@ -13,7 +13,7 @@
 
 <body>
 
-
+<div class="root">
 <div class="navbar">
   <div class="dropdown">
     <button class="dropbtn">Menu 
@@ -60,29 +60,10 @@
   </div>
   </div>
 </div>
+</div>
 
-<script>
-    $( document ).ready(function(){
-      $('#screen').html(localStorage.getItem("data"));
-      
-    });
-    function addRow(){
-      var str = '<tr class = "boxType"><td>'+$('#time').val()+'</td>\
-  <td>'+$('#int').val()+'</td>\
-  <td>'+$('#lname').val()+'</td>\
-  <td>'+$('#fname').val()+'</td>\
-  <td><input type="button" value="DELETE" /></td>\
-  </tr>'
-      $('#screen').append(str);
-      localStorage.setItem("data", $('#screen').html());
-    }
+<script src="Check-In.js"></script>
 
-        // DELETE TABLE ROW.
-    $('#screen').on('click', 'input[type="button"]', function () {
-    $(this).closest('tr').remove();
-})
-
-</script>
 </body>
 
 </html>
