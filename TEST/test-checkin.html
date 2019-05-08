@@ -1,70 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="test-checkin.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Check-In</title>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script src="//code.jquery.com/ui/1.11.0/jquery-ui.min.js"></script>
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-</head>
 
+
+  <style>
+  .grid-container {
+  display: grid;
+  grid-gap: 75PX 20PX;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  padding: 15px;
+  height: 89%;
+  width: 97%;
+  background: white;
+  }
+
+  #grid-item {
+  background: #4CAF50;
+  border: 0.5px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#grid-item.highlight {
+    background: #f44336;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
 <body>
 
-<nav class="nav-main">
-  <ul>
-    <li>
-      <a href="#" class="nav-item logo">Menu</a>
-      <div class="nav-content">
-       <div class="nav-sub">
-        <ul>
-          <li>
-            <a href="Check-In.html" class="nav-item">Check-in</a>
-          </li>
-          <li>
-            <a href="../FloorPlan/FloorPlan.html" class="nav-item">Floor Plan</a>
-          </li>
-          <li>
-            <a href="../Food-Bev/Food-Bev.html" class="nav-item">Food & Beverage</a>
-          </li>
-        </ul>
-       </div>
-      </div>
-    </li>
-  </ul>
-</nav>
 
-<div class="pagebox">
-  <div class="form">
-    <p>Student Name:
-    <input type="text" id="lname" placeholder="Doe">
-    <input type="text" id="fname" placeholder="John">
-    </p>
-    <br>
-    <p>
-    Interviewer and Time:
-    <input type="text" id="int" placeholder="Jane Doe Cheese LLC.">
-    <input type="text" id="time" placeholder="12:00 (24 Hour Time)">
-    </p>
-    <button onclick="addRow()">submit</button>
-</div>
+  <div class="grid-container">
+    <div id="grid-item">1</div>
+    <div id="grid-item">2</div>
+    <div id="grid-item">3</div>
+    <div id="grid-item">4</div>
+    <div id="grid-item">5</div>
+    <div id="grid-item">6</div>
+    <div id="grid-item">1</div>
+    <div id="grid-item">2</div>
+    <div id="grid-item">3</div>
+    <div id="grid-item">4</div>
+    <div id="grid-item">5</div>
+    <div id="grid-item">6</div>
+  </div>
+ 
+<script>
+$( document ).on( "click", function( event ) {
+  $( event.target ).closest( "#grid-item" ).toggleClass( "highlight" );
+});
+</script>
 
-<div class="parent">
-  <div class="scrollbar" id="style-1"></div>
-  <div class="scrollable">
-    <table style="width: 100%">
-      <thead>
-        <tr>
-         <th>Time</th>
-         <th>Interviewer</th>
-         <th>Last Name</th>
-         <th>First Name</th>
-        </tr>
-      </thead>
-    </table>
-  </div>
-  </div>
-</div>
 
 </body>
 </html>

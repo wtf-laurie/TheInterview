@@ -1,175 +1,27 @@
-@import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:700";
-
-html, body {
-  height: 100%;
-  width: 100%;
+#Div1
+{ 
+  z-index: -2;
+  border: 1px solid black;
+  height: 300px;
+  width: 400px;
+}
+#Div2
+{
+  z-index: -1;
+  border: 1px solid black;
+  width: 300px;
+  height: 200px;
+  margin: 50px 0 0 50px;
+}
+#Div3
+{
+  border: 1px solid black;
+  width: 200px;
+  height: 150px;
+  margin: 23px 0 0 47px;
 }
 
-body {
-  padding: 0px;
-  margin: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  background: #fbf9ff;
-}
-
-.nav-main {
-  width: 100%;
-  background-color: gray;
-  height: 70px;
-  color: white;
-}
-
-.content {
-  padding: 30px;
-}
- 
- .nav-main .logo {
-  float: left;
-  height: 40px;
-  padding: 15px 30px;
-  font-size: 18px;
-  line-height: 40px;
-  z-index: 2;
- }
-
- .nav-main > ul {
-  margin: 0;
-  padding: 0;
-  float: left;
-  list-style-type: none;
-  z-index: 2;
- }
-
- .nav-main >ul >li {
-  float: left;
- }
-
- .nav-item {
-  display: inline-block;
-  padding: 10px 15px;
-  height: 40px;
-  line-height: 40px;
-  color: white;
-  text-decoration: none;
-  z-index: 2;
- }
-
- .nav-item:hover {
-  background-color: #444;
- }
-
-.nav-content {
-  position: absolute;
-  top: 70px;
-  overflow: hidden;
-  background-color: gray;
-  max-height: 0;
-}
-
-.nav-content a {
-  color: white;
-  text-decoration: none;
-}
-
-.nav-content a:hover {
-  text-decoration: none;
-}
-
-.nav-sub {
-  padding: 15px;
-}
-
-.nav-sub ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.nav-sub ul li a {
-  display: block;
-  padding: 5px 0;
-}
-
-.nav-item:focus {
-  background-color: #444;
-}
-
-.nav-item:focus ~ .nav-content {
-  max-height: 400px;
-  -webkit-transition: max-height 0.3s ease-in;
-  -moz-transition: max-height 0.3s ease-in;
-  transition: max-height 0.3s ease-in;
-}
-
-.scrollbar {
-  margin-left: 1px;
-  float: right;
-  height: 90%;
-  width: 10px;
-  background: #F5F5F5;
-  overflow-y: scroll;
-  margin-bottom: 1px;
-}
-
-.force-overflow {
-  min-height: 450px;
-}
-
-#wrapper {
-  text-align: center;
-  margin: auto;
-}
-
-#style-1::-webkit-scrollbar {
-  width: 12px;
-  background-color: #F5F5F5;
-}
-
-#style-1::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background-color: #555;
-}
-
-#style-1::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-  border-radius: 10px;
-  background-color: #F5F5F5;
-}
-
-
-#pagebox {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  margin-top: 70px;
-}
-
-.parent {
-  position: absolute;
-  overflow: hidden;
-  height: 100%;
-  width: 50%;
-  background: #ddd;
-  margin-bottom: 2.5%;
-}
-
-.scrollable {
-  width: 100%;
-  height: 90%;
-  float: left;
-}
-
-.form {
-  float: left;
-  background: #DDE5F1;
-  width: 50%;
-  height: 100%;
-  margin-left: 50%;
-  text-align: center;
-  z-index: 1;
-}
-
-p {
-  font-size: 24px;
+#DivBtn
+{
+  margin-top: 30px;
 }

@@ -1,4 +1,34 @@
-/* #4494B4 (Light Navy Blue) #DDE5F1 (Very Light Blue) #1E303E (Dark Blue) #59535D (Purple) #6686A2 (Med Blue) */
+ .grid-container {
+  display: grid;
+  grid-gap: 75PX 20PX;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto;
+  padding: 15px;
+  height: 89%;
+  width: 97%;
+  background: white;
+  }
+
+  #grid-item {
+  background: #4CAF50;
+  border: 0.5px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+#grid-item.highlight {
+    background: #f44336;
+  }
+  
+  #grid-item.none {
+    background: black;
+  }
+  
+  
+  
+  
+  /* #4494B4 (Light Navy Blue) #DDE5F1 (Very Light Blue) #1E303E (Dark Blue) #59535D (Purple) #6686A2 (Med Blue) */
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:700";
 
 html, body{
