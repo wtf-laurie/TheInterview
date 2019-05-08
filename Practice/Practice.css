@@ -1,7 +1,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	color: #000;
-	font-size: 40px
+	font-size: 35px
 }
 
 #container {
@@ -17,7 +17,7 @@ body {
 }
 
 #quoteContainer {
-	width: 75%;
+	width: 100%;
 	background: #fff;
 	padding: 10px;
 	margin: 30px auto;
