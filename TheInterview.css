@@ -191,16 +191,22 @@ a.bttn-medium:focus {
 }
 
 #help {
-  margin-left: 55%;
   color: #ff0072;
+  position: absolute;
+  margin-top: 55px;
+  text-overflow: all;
 }
 
 #help2 {
-  margin-left: 55%;
   color: #644cad;
+  position: absolute;
+  margin-top: 55px;
+  text-overflow: all;
 }
 
 #help3 {
-  margin-left: 50%;
   color: #1a9cbc;
+  position: absolute;
+  margin-top: 55px; 
+  text-overflow: all;
 }
